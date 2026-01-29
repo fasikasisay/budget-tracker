@@ -14,6 +14,13 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const database = firebase.database();
 
+firebase.auth().onAuthStateChanged(user => {
+    if (!user) {
+        // not logged in → go to login page
+        window.location.href = "login.html";
+    }
+});
+
 const addBtn = document.getElementById("add-expense-btn");
 const table = document.getElementById("expense-table");
 const totalEl = document.getElementById("total");
