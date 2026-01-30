@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "budget-tracker-197ff",
     "public": ".",
     "ignore": [
       "firebase.json",
@@ -9,8 +10,10 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.html"
+        "destination": "/login.html"
       }
     ]
   }
 }
+
+
